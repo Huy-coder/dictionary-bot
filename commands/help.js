@@ -7,7 +7,7 @@ const prefix = botsetting.prefix;
 
 
 module.exports.run = async (bot, message, args) =>{
-    if (args[0] == "help") return message.channel.send(`Just do ${prefix} help instead`)
+    if (args[0] == "help") return message.channel.send(`Thêm ${prefix} vào trước help, ex: !help`)
 
     if(args[0]) {
         let command = args[0];
@@ -28,16 +28,16 @@ module.exports.run = async (bot, message, args) =>{
         let embed = new Discord.MessageEmbed()
         .setAuthor("help command", message.guild.iconURl)
         .setColor(colours.gray)
-        .setDescription(`${message.author.username} check your dms`)
+        .setDescription(`${message.author.username} Kiểm tra thông báo!!!`)
 
         let Sembed = new Discord.MessageEmbed()
         .setColor(colours.red)
         .setAuthor("Testbot Help", message.guild.iconURL)
         .setThumbnail(bot.user.displayAvatarURL)
         .setTimestamp()
-        .setDescription(`there are the available command for the Testbot \n the bot prefix is : ${prefix} `)
+        .setDescription(`Đây là những câu lệnh có thể thực hiện \nKí tự đầu tiên để thực thi lệnh : ${prefix} `)
         .addField(`Command`, "``cat`` ``dog`` ``meme`` ``serverinfo`` ``userinfo`` ``tudien`` ``xoa``" )
-        .setFooter("Test bot ", bot.user.displayAvatarURL) 
+        .setFooter("Bot từ điển", bot.user.displayAvatarURL) 
         message.channel.send(embed).then(m => m.delete(10000))
         message.author.send(Sembed)
     }

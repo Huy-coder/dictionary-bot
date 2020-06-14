@@ -6,13 +6,13 @@ const superagent = require("superagent")
 module.exports.run = async (bot,message,args) =>{
   //commands
  
-  let msg = await message.channel.send("Generating...")
+  let msg = await message.channel.send("Đang tải...")
 
   let {body} = await superagent
   .get(`https://dog.ceo/api/breeds/image/random`)
   //console.log(body.message)
 
-  if(!{body}) return message.channel.send("Try Again!")
+  if(!{body}) return message.channel.send("Thử lại!!")
 
       let dEmbed = new Discord.MessageEmbed()
       .setColor("#C0B8C3")
@@ -29,7 +29,7 @@ module.exports.run = async (bot,message,args) =>{
 module.exports.config = {
 
     name: "dog",
-    aliases:  [],
+    aliases:  ["cho"],
     noalias: "No aliases",
     accessableby:"Member",
 }

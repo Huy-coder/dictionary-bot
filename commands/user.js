@@ -23,7 +23,7 @@ module.exports.run = async (bot,message,args) =>{
 module.exports.config = {
 
     name: "userinfo",
-    aliases:  ["user","userinfo"],
+    aliases:  ["user"],
     noalias: "No aliases",
     accessableby:"Member",
 }

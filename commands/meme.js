@@ -5,13 +5,13 @@ const superagent = require("superagent")
 
 module.exports.run = async (bot,message,args) =>{
   //commands
-  let msg = await message.channel.send("Generating...")
+  let msg = await message.channel.send("Đang tải...")
 
   let {body} = await superagent
   .get(`https://some-random-api.ml/meme`)
   //console.log(body.message)
 
-  if(!{body}) return message.channel.send("Try Again!")
+  if(!{body}) return message.channel.send("Thử lại!")
 
       let mEmbed = new Discord.MessageEmbed()
       .setColor("#C0B8C3")
