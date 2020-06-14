@@ -31,8 +31,9 @@ module.exports.run = async (bot, message, args) =>{
         .setDescription(`${message.author.username} Kiểm tra thông báo!!!`)
 
         let Sembed = new Discord.MessageEmbed()
+        .setTitle("Hỗ trợ")
         .setColor(colours.red)
-        .setAuthor("Testbot Help", message.guild.iconURL)
+        .setAuthor("Dictionary Bot", message.guild.iconURL)
         .setThumbnail(bot.user.displayAvatarURL)
         .setTimestamp()
         .setDescription(`Đây là những câu lệnh có thể thực hiện \nKí tự đầu tiên để thực thi lệnh : ${prefix} `)
