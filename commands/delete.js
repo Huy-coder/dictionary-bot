@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const colours = require("../colour.json");
 const botsetting = require("../botsetting.json");
-const { delete, delete } = require("superagent");
+
 
 module.exports = {
     config: {
