@@ -37,7 +37,7 @@ module.exports = {
         }
 
         message.channel.bulkDelete(deleteAmount, true)
-            .then(delete => message.channel.send(`Tôi sẽ xóa ${deleted.size} tin nhắn.`))
+            .then(deleted => message.channel.send(`Tôi sẽ xóa ${deleted.size} tin nhắn.`))
             .catch(err => message.reply(`Có gì đó sai sai à nha.... ${err}`));
 }
 }
