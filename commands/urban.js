@@ -19,7 +19,7 @@ module.exports = {
         let search = args[1] ? urban(args.slice(1).join(" ")) : urban.random()
             try{
                 search.first(res => {
-                    if(!res) return message.channel.send("no result");
+                    if(!res) return message.channel.send("Không có kết quả");
                     let {word, definition, example, thumbs_up, thumbs_down, premalink, author} = res; //res.word
 
                         let embed = new Discord.MessageEmbed()
