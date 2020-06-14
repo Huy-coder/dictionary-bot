@@ -36,7 +36,7 @@ module.exports.run = async (bot, message, args) =>{
         .setThumbnail(bot.user.displayAvatarURL)
         .setTimestamp()
         .setDescription(`there are the available command for the Testbot \n the bot prefix is : ${prefix} `)
-        .addField(`Command`, "``cat`` ``dog`` ``meme`` ``serverinfo`` ``userinfo`` ``tudien``" )
+        .addField(`Command`, "``cat`` ``dog`` ``meme`` ``serverinfo`` ``userinfo`` ``tudien`` ``xoa``" )
         .setFooter("Test bot ", bot.user.displayAvatarURL) 
         message.channel.send(embed).then(m => m.delete(10000))
         message.author.send(Sembed)
